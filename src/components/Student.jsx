@@ -1,28 +1,20 @@
-// ไฟล์: Student.jsx
 import smilee from './smilee.jpg';
 
 function Student() {
     return(
         <div style={{
-            // --- ส่วนจัดวาง (Layout) ---
             textAlign: 'center',       
             maxWidth: '600px',         
             margin: '20px auto',
             padding: '20px',
             borderRadius: '15px',      
-            
-            // --- ส่วนพื้นหลังขยับได้ (Animation) ---
-            // เราใช้ linear-gradient แบบไล่สี: ขาว -> ฟ้าอ่อน -> ชมพูอ่อน -> ขาว
             background: 'linear-gradient(270deg, #ffffff, #e3f2fd, #fce4ec, #ffffff)',
-            backgroundSize: '800% 800%', // ขยายพื้นหลังให้ใหญ่ เพื่อให้เห็นการเลื่อน
-            animation: 'gradientAnimation 10s ease infinite', // สั่งให้ขยับตลอดเวลา
-            
-            // --- เส้นขอบและเงา ---
+            backgroundSize: '800% 800%',
+            animation: 'gradientAnimation 10s ease infinite',
             border: '1px solid rgba(255,255,255,0.8)', 
             boxShadow: '0 10px 30px rgba(0,0,0,0.1)' 
         }}>
             
-            {/* โค้ดสั่ง Animation (สูตรลับ: ฝัง style ไว้ในนี้เลย) */}
             <style>
                 {`
                     @keyframes gradientAnimation {
@@ -33,14 +25,13 @@ function Student() {
                 `}
             </style>
 
-            {/* --- เนื้อหาข้างใน (เหมือนเดิม) --- */}
             <img src={smilee} alt='My Profile' style={{
                 width: '200px',        
                 height: '200px',
                 objectFit: 'cover',    
                 borderRadius: '15px',  
                 marginBottom: '20px',
-                border: '4px solid white', // เพิ่มขอบขาวให้รูปดูเด้งขึ้น
+                border: '4px solid white',
                 boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
             }} />
             
