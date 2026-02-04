@@ -7,7 +7,7 @@ export const Footer = () => {
             backgroundColor: '#34495e', // สีโทนเดียวกับ Header แต่อ่อนลงนิดนึง
             color: 'white',
             textAlign: 'center',
-            padding: '15px 0',
+            padding: '25px 0',
             fontSize: '0.9rem',
             // ถ้าเนื้อหาน้อย Footer จะลอยขึ้นมา ใช้ margin-top ช่วยได้ระดับนึงใน App.js
         }}>
