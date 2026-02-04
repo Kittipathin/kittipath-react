@@ -60,7 +60,7 @@ function Student() {
                     <strong>ID:</strong> 6802041510279
                 </p>
                 <p style={{ fontSize: '1.1rem', color: '#555', margin: '8px 0' }}>
-                    <strong>Tel:</strong> 0XX-XXX-XXXX
+                    <strong>Tel:</strong> 099-223-2005
                 </p>
             </div>
         </div>
