@@ -1,7 +1,7 @@
 // App.js
-import Header from './Header';
-import Student from './Student';
-import { Footer } from './Footer';
+import Header from './components/Header';
+import Student from './components/Student';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
