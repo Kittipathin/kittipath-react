@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
-    // สไตล์ของปุ่มเมนู
     const linkStyle = {
         color: 'white',
         textDecoration: 'none', 
@@ -20,7 +19,6 @@ const Header = (props) => {
             textAlign: 'center',
             boxShadow: '0 4px 10px rgba(0,0,0,0.2)'
         }}>
-            {/* หัวเว็บรวมกับของอาจารย์ */}
             <h1 style={{ fontSize: '2.5rem', margin: '0 0 5px 0', fontWeight: 'bold' }}>
                 Kittipath-React
             </h1>
@@ -28,7 +26,6 @@ const Header = (props) => {
                 Firebase Authen with Google Account
             </p>
 
-            {/* --- แถบตรวจสอบการล็อกอิน (แปลงจากโค้ดอาจารย์) --- */}
             <div style={{ 
                 display: 'flex', 
                 justifyContent: 'space-between', 
@@ -40,7 +37,6 @@ const Header = (props) => {
                 borderRadius: '8px'
             }}>
                 {props.user ? ( 
-                    // กรณี user is logged in
                     <>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem' }}>
                             <b>Welcome: </b> {props.user.displayName}
@@ -55,7 +51,6 @@ const Header = (props) => {
                         </div>
                     </>
                 ) : ( 
-                    // กรณี user is not logged in
                     <>
                         <div style={{ fontSize: '1.1rem' }}>
                             You are not logged in.
@@ -70,7 +65,6 @@ const Header = (props) => {
                 )}
             </div>
 
-            {/* --- แถบเมนูนำทาง (ซ่อนไว้ถ้ายังไม่ Login) --- */}
             {props.user && (
                 <div style={{ marginTop: '10px' }}>
                     <Link to="/" style={linkStyle}>Info</Link> | 

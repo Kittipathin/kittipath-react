@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import Header from './components/Header'; 
-import Home from './components/Home';  // 👈 เพิ่มการนำเข้าหน้า Home ตรงนี้
+import Home from './components/Home';
 import Student from './components/Student'; 
 import Education from './components/Education'; 
 import Hobby from './components/Hobby';         
@@ -68,12 +68,10 @@ const App = () => {
 
                 <Header user={userInfo} login={login} logout={logout}/>
                 
-                {/* 👈 เรียกใช้หน้า Home ตรงนี้ ตามที่อาจารย์สั่ง */}
                 <Home user={userInfo} />
                 
                 <div style={{ flex: 1, display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'center' }}>
                     {
-                        // ถ้าล็อกอินแล้ว ถึงจะโชว์เนื้อหาหน้าเว็บอื่นๆ (เมนูนำทางต่างๆ)
                         userInfo && (
                             <Routes>
                                 <Route path="/" element={<Student />} />          
